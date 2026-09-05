@@ -1,6 +1,6 @@
 # Orbital — Mission Control
 
-An interactive jQuery orbital sandbox with a Three.js Earth visualization, fictional spacecraft, simulated telemetry, and an orbital mission planner.
+An interactive jQuery orbital sandbox with a native WebGL Earth visualization, fictional spacecraft, simulated telemetry, and an orbital mission planner.
 
 ## Run
 
@@ -23,7 +23,7 @@ Use the URL printed by the development server. `npm run build` creates the produ
 
 All spacecraft are fictional. Circular orbits use Earth's gravitational parameter and radius. Displayed orbit heights are expanded for legibility. Telemetry is illustrative, with 60 synthetic warm-up samples for the initial constellation. Simulation time stops while the page is hidden. Missions remain in the current page session; starred spacecraft and layer preferences use device-local browser storage. Reduced-motion preferences start the simulation paused.
 
-The application state, events, rendering, filtering, dialogs, and commands are implemented with jQuery 4. Three.js renders the 3D visualization. The public GitHub Pages build is a static jQuery and Three.js application with no React runtime. A separate development shell is also retained.
+jQuery 4 is the only runtime dependency. The entire application uses plain JavaScript, jQuery, CSS, Canvas 2D, and native WebGL. Vite is used only for local development and bundling. There is no React, JSX, component framework, Three.js, or server runtime.
 
 An optional, feature-detected WebMCP interface exposes read state, spacecraft selection, playback configuration, and simulated spacecraft creation through the same functions as the interface.
 
@@ -46,7 +46,7 @@ GitHub Pages serves the committed `docs/` output from `main`. To publish an upda
 ```sh
 npm ci
 npm run build:pages
-npx tsc --noEmit
+npm run check
 # Commit the source and regenerated docs/ output, then push main.
 ```
 
