@@ -39,7 +39,7 @@ NASA imagery does not imply NASA endorsement.
 
 ## Public site
 
-[Open Orbital](https://reachjalil.github.io/orbital-mission-control/)
+[Open Orbital](https://reachjalil.github.io/orbital-mission-control/) · [Watch the 29-second demo](https://reachjalil.github.io/orbital-mission-control/orbital-demo.mp4)
 
 GitHub Pages serves the committed `docs/` output from `main`. To publish an update:
 
